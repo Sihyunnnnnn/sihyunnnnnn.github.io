@@ -61,7 +61,10 @@ p {
   padding: 20px;
   border: 1px solid #ddd;
   position: relative;
+  width: 400px; 
+  max-width: 90%;
 }
+
 
 .popup textarea {
   width: 300px;
