@@ -12,7 +12,7 @@
     <button onclick="showDetail('ewha')">EWHA UNIV.</button>
     <button onclick="showDetail('naver')">NAVER</button>
     <button onclick="showDetail('kakao')">KAKAO</button>
-    <button onclick="showDetail('kakao enterprise')">KEP</button>
+    <button onclick="showDetail('kakao_enterprise')">KEP</button>
 
     <div id="detail" class="detail-box">
       <!-- 여기에 내용이 동적으로 들어감 -->
@@ -27,7 +27,7 @@
         detailBox.innerHTML = "<p>네이버 마케팅센터 인턴 어쩌구</p>";
       } else if (company === 'kakao') {
         detailBox.innerHTML = "<p>카카오 어쩌구</p>";
-      } else if (company === 'kakao enterprise') {
+      else if (company === 'kakao_enterprise') {
         detailBox.innerHTML = "<p>카카오 엔터프라이즈 어쩌구</p>";
       }
     }
