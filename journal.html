@@ -9,12 +9,26 @@
   <button class="back-btn" onclick="history.back()">← Go Back</button>
   <div class="container">
     <h1>My Yearly Journal</h1>
-    <button onclick="location.href='write.html'">Write New Entry</button>
-
-    <div id="journal-list">
-      <p>(아직 작성된 글이 없습니다.)</p>
-    </div>
+    <button class="btn" onclick="location.href='write.html'">Write New Entry</button>
+    <div id="journal-list"></div>
   </div>
+
+  <script>
+    function loadEntries() {
+      let entries = JSON.parse(localStorage.getItem("journalEntries") || "[]");
+      let list = document.getElementById("journal-list");
+      if (entries.length === 0) {
+        list.innerHTML = "<p>No entries yet.</p>";
+        return;
+      }
+      list.innerHTML = "";
+      entries.forEach((entry, index) => {
+        let div = document.createElement("div");
+        div.innerHTML = `<p>${index + 1}. ${entry}</p><hr>`;
+        list.appendChild(div);
+      });
+    }
+    loadEntries();
+  </script>
 </body>
 </html>
-
