@@ -6,12 +6,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button onclick="history.back()">← Go Back</button>
+  <button class="back-btn" onclick="history.back()">← Go Back</button>
   <div class="container">
     <h1>Hello. Welcome to my PF!</h1>
-    <button onclick="showDetail('ewha')">Ewha W Univ</button>
+    <button onclick="showDetail('ewha')">EWHA UNIV.</button>
     <button onclick="showDetail('naver')">NAVER</button>
     <button onclick="showDetail('kakao')">KAKAO</button>
+    <button onclick="showDetail('kakao enterprise')">KEP</button>
 
     <div id="detail" class="detail-box">
       <!-- 여기에 내용이 동적으로 들어감 -->
@@ -21,11 +22,13 @@
     function showDetail(company) {
       let detailBox = document.getElementById('detail');
       if (company === 'ewha') {
-        detailBox.innerHTML = "<p>이화여대 관련 경험 상세 내용!</p>";
+        detailBox.innerHTML = "<p>이화여대 학생회장, 창업팀 어쩌구</p>";
       } else if (company === 'naver') {
-        detailBox.innerHTML = "<p>네이버 관련 경험 상세 내용!</p>";
+        detailBox.innerHTML = "<p>네이버 마케팅센터 인턴 어쩌구</p>";
       } else if (company === 'kakao') {
-        detailBox.innerHTML = "<p>카카오 관련 경험 상세 내용!</p>";
+        detailBox.innerHTML = "<p>카카오 어쩌구</p>";
+      } else if (company === 'kakao enterprise') {
+        detailBox.innerHTML = "<p>카카오 엔터프라이즈 어쩌구</p>";
       }
     }
   </script>
