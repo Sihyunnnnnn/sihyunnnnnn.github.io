@@ -35,7 +35,6 @@ p {
   text-align: right;
 }
 
-/* 버튼 공통 스타일 */
 button {
   margin: 10px;
   padding: 10px 20px;
@@ -43,7 +42,7 @@ button {
   cursor: pointer;
 }
 
-/* 팝업 */
+/* Popup */
 .popup {
   display: none;
   position: fixed;
