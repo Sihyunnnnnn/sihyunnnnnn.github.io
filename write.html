@@ -6,17 +6,27 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button onclick="history.back()">← Go Back</button>
+  <button class="back-btn" onclick="history.back()">← Go Back</button>
   <div class="container">
     <h1>Write a New Journal Entry</h1>
     <textarea id="entry" placeholder="Write your journal entry here..."></textarea><br>
-    <button onclick="saveEntry()">Save</button>
+    <button class="btn" onclick="saveEntry()">Save</button>
   </div>
+
   <script>
     function saveEntry() {
-      alert("저장은 로컬 스토리지 or 깃허브 직접 수정 방식으로 구현 가능합니다! (추후 추가)");
+      let content = document.getElementById("entry").value;
+      if (!content) {
+        alert("Please write something!");
+        return;
+      }
+
+      let entries = JSON.parse(localStorage.getItem("journalEntries") || "[]");
+      entries.push(content);
+      localStorage.setItem("journalEntries", JSON.stringify(entries));
+      alert("Saved!");
+      window.location.href = "journal.html";
     }
   </script>
 </body>
 </html>
-
