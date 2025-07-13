@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guestbook</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="back-btn" onclick="history.back()">← Go Back</button>
+  <div class="container">
+    <h1>Guestbook Messages</h1>
+    <div id="guest-list"></div>
+  </div>
+
+  <script>
+    function loadMessages() {
+      let messages = JSON.parse(localStorage.getItem("guestMessages") || "[]");
+      let list = document.getElementById("guest-list");
+      if (messages.length === 0) {
+        list.innerHTML = "<p>No messages yet.</p>";
+        return;
+      }
+      list.innerHTML = "";
+      messages.forEach((msg, index) => {
+        let div = document.createElement("div");
+        div.innerHTML = `<p>${index + 1}. ${msg}</p><hr>`;
+        list.appendChild(div);
+      });
+    }
+    loadMessages();
+  </script>
+</body>
+</html>
