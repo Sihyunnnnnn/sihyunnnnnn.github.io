@@ -8,7 +8,6 @@ body {
   height: 100vh;
 }
 
-
 .left-buttons {
   width: 30%;
   display: flex;
@@ -38,7 +37,6 @@ p {
   font-weight: 400; /* Regular */
 }
 
-
 .btn {
   margin: 10px;
   padding: 12px 28px;
@@ -56,20 +54,20 @@ p {
   opacity: 0.85;
 }
 
-
 /* Popup */
 .popup {
   display: none;
   position: fixed;
-  top: 30%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -30%);
+  transform: translate(-50%, -50%);
   background: #FFFFFF;
   padding: 40px 20px;
   border: 1px solid #000000;
   position: relative;
   width: 400px;
   max-width: 90%;
+  box-sizing: border-box;
 }
 
 .popup h2 {
@@ -79,7 +77,6 @@ p {
   color: #000000;
   text-align: center;
 }
-
 
 .popup textarea {
   width: 100%;
@@ -91,6 +88,25 @@ p {
   font-family: 'Pretendard', sans-serif;
   font-size: 16px;
   resize: none;
+}
+
+.popup button {
+  margin-top: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.close-btn:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 768px) {
@@ -108,17 +124,16 @@ p {
   h1, p {
     text-align: center;
   }
-}
 
+  .popup {
+    width: 90%;
+  }
 
-.popup button {
-  margin-top: 10px;
-}
-@media (max-width: 768px) {
   .popup textarea {
-    width: 80vw;
+    width: 100%;
   }
 }
+
 .back-btn {
   margin: 10px;
   padding: 6px 12px;
@@ -130,20 +145,6 @@ p {
 
 .back-btn:hover {
   text-decoration: underline;
-}
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #000000;
-}
-
-.close-btn:hover {
-  opacity: 0.7;
 }
 
 .main-btn {
@@ -162,4 +163,3 @@ p {
 .main-btn:hover {
   opacity: 0.85;
 }
-
