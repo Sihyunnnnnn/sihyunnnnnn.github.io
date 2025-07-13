@@ -9,10 +9,11 @@
   <button class="back-btn" onclick="history.back()">← Go Back</button>
   <div class="container">
     <h1>Hello. Welcome to my PF!</h1>
-<button class="portfolio-btn btn-ewha">EWHA UNIV.</button>
-<button class="portfolio-btn btn-kep">KEP</button>
-<button class="portfolio-btn btn-naver">NAVER</button>
-<button class="portfolio-btn btn-kakao">KAKAO</button>
+<button class="portfolio-btn btn-ewha" onclick="showDetail('ewha')">EWHA UNIV.</button>
+<button class="portfolio-btn btn-kep" onclick="showDetail('kep')">KEP</button>
+<button class="portfolio-btn btn-naver" onclick="showDetail('naver')">NAVER</button>
+<button class="portfolio-btn btn-kakao" onclick="showDetail('kakao')">KAKAO</button>
+
 
     <div id="detail" class="detail-box">
       <!-- 여기에 내용이 동적으로 들어감 -->
